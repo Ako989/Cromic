@@ -1,0 +1,27 @@
+[
+  {
+    "prenda": "camisa blanca",
+    "tipo": "camisa",
+    "color": "blanco"
+  },
+  {
+    "prenda": "jean azul",
+    "tipo": "pantalon",
+    "color": "azul"
+  },
+  {
+    "prenda": "chaqueta negra",
+    "tipo": "chaqueta",
+    "color": "negro"
+  },
+  {
+    "prenda": "tenis blancos",
+    "tipo": "calzado",
+    "color": "blanco"
+  },
+  {
+    "prenda": "vestido rojo",
+    "tipo": "vestido",
+    "color": "rojo"
+  }
+]

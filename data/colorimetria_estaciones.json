@@ -1,0 +1,130 @@
+[
+  {
+    "estacion": "primavera",
+    "nombre": "Primavera cálida",
+    "temperatura": "calida",
+    "intensidad": "brillante",
+    "profundidad": "clara",
+    "vibes": "Fresca, luminosa, alegre, juvenil",
+    "paleta": [
+      {"nombre": "salmón", "hex": "#FF9E8F"},
+      {"nombre": "coral", "hex": "#FF6B4A"},
+      {"nombre": "amarillo suave", "hex": "#F9DC6E"},
+      {"nombre": "verde lima", "hex": "#B5DE8A"},
+      {"nombre": "aguamarina", "hex": "#97D8CC"},
+      {"nombre": "durazno claro", "hex": "#F5D68F"},
+      {"nombre": "beige", "hex": "#EBDDB0"},
+      {"nombre": "dorado", "hex": "#D9AE5F"},
+      {"nombre": "naranja durazno", "hex": "#FBC57D"},
+      {"nombre": "crema", "hex": "#FDF3E1"}
+    ],
+    "evitar": [
+      {"nombre": "negro", "hex": "#0A0A0A"},
+      {"nombre": "gris oscuro", "hex": "#444444"},
+      {"nombre": "azul marino", "hex": "#14264A"},
+      {"nombre": "azul índigo", "hex": "#3F5A9C"},
+      {"nombre": "gris claro", "hex": "#A9A9A9"}
+    ],
+    "como_se_ve": {
+      "piel blanca": "Ilumina la piel, aporta calidez y efecto buena cara.",
+      "piel trigueña": "Realza el tono natural, aporta luz y vitalidad.",
+      "piel negra": "Aporta un brillo saludable y hace que los rasgos resalten."
+    }
+  },
+  {
+    "estacion": "verano",
+    "nombre": "Verano frío",
+    "temperatura": "fria",
+    "intensidad": "suave",
+    "profundidad": "clara",
+    "vibes": "Suave, delicada, romántica, elegante",
+    "paleta": [
+      {"nombre": "rosa pastel", "hex": "#FFC8D8"},
+      {"nombre": "lila claro", "hex": "#E8D3E8"},
+      {"nombre": "lavanda", "hex": "#D0D3EE"},
+      {"nombre": "azul cielo", "hex": "#B5D3EA"},
+      {"nombre": "gris azulado claro", "hex": "#C5D0D6"},
+      {"nombre": "rosa viejo", "hex": "#D4A0B0"},
+      {"nombre": "malva", "hex": "#C98BB0"},
+      {"nombre": "lila grisáceo", "hex": "#A99BC2"},
+      {"nombre": "gris", "hex": "#9A9CA8"},
+      {"nombre": "gris azulado", "hex": "#8A8FA0"}
+    ],
+    "evitar": [
+      {"nombre": "naranja", "hex": "#FF6D0A"},
+      {"nombre": "amarillo intenso", "hex": "#F5B70A"},
+      {"nombre": "marrón cobrizo", "hex": "#B8641E"},
+      {"nombre": "verde oliva", "hex": "#5E6B25"},
+      {"nombre": "rojo anaranjado", "hex": "#E2401E"}
+    ],
+    "como_se_ve": {
+      "piel blanca": "Suaviza las facciones, da un aspecto fresco y natural.",
+      "piel trigueña": "Armoniza sin apagar la piel, efecto natural.",
+      "piel negra": "Aporta suavidad y elegancia, sin crear contraste brusco."
+    }
+  },
+  {
+    "estacion": "otono",
+    "nombre": "Otoño cálido",
+    "temperatura": "calida",
+    "intensidad": "suave",
+    "profundidad": "profunda",
+    "vibes": "Cálida, natural, acogedora, intensa",
+    "paleta": [
+      {"nombre": "naranja quemado", "hex": "#E8601C"},
+      {"nombre": "naranja", "hex": "#F07C1E"},
+      {"nombre": "mostaza", "hex": "#D9A030"},
+      {"nombre": "verde oliva", "hex": "#8A8A3A"},
+      {"nombre": "verde bosque", "hex": "#4A6B3A"},
+      {"nombre": "marrón", "hex": "#A0622D"},
+      {"nombre": "rojo teja", "hex": "#B83A22"},
+      {"nombre": "terracota", "hex": "#C67B45"},
+      {"nombre": "beige arena", "hex": "#E0C9A0"},
+      {"nombre": "chocolate", "hex": "#5E3B24"}
+    ],
+    "evitar": [
+      {"nombre": "fucsia", "hex": "#F0288C"},
+      {"nombre": "celeste", "hex": "#A9D8E6"},
+      {"nombre": "lila", "hex": "#9C8CB8"},
+      {"nombre": "gris azulado", "hex": "#7C8590"},
+      {"nombre": "blanco puro", "hex": "#FFFFFF"}
+    ],
+    "como_se_ve": {
+      "piel blanca": "Aporta calidez, aspecto saludable y natural.",
+      "piel trigueña": "Enriquece el tono de piel, efecto cálido y armónico.",
+      "piel negra": "Resalta la profundidad natural y aporta un brillo dorado."
+    }
+  },
+  {
+    "estacion": "invierno",
+    "nombre": "Invierno frío",
+    "temperatura": "fria",
+    "intensidad": "brillante",
+    "profundidad": "profunda",
+    "vibes": "Dramática, sofisticada, audaz, moderna",
+    "paleta": [
+      {"nombre": "negro", "hex": "#000000"},
+      {"nombre": "blanco", "hex": "#FFFFFF"},
+      {"nombre": "rojo", "hex": "#D01018"},
+      {"nombre": "fucsia", "hex": "#B8248C"},
+      {"nombre": "azul real", "hex": "#1F4FA8"},
+      {"nombre": "verde esmeralda", "hex": "#0F7A4A"},
+      {"nombre": "morado", "hex": "#4A2A7A"},
+      {"nombre": "azul marino", "hex": "#142450"},
+      {"nombre": "gris carbón", "hex": "#2B2F33"},
+      {"nombre": "gris", "hex": "#9A9A9A"}
+    ],
+    "evitar": [
+      {"nombre": "mostaza", "hex": "#E8B01A"},
+      {"nombre": "camel", "hex": "#BC8B4E"},
+      {"nombre": "naranja", "hex": "#E0620E"},
+      {"nombre": "verde oliva", "hex": "#8A8A4A"},
+      {"nombre": "beige rosado", "hex": "#D8BBA0"}
+    ],
+    "como_se_ve": {
+      "piel blanca": "Aporta contraste y definición, efecto radiante.",
+      "piel trigueña": "Aporta contraste y hace que los rasgos destaquen.",
+      "piel negra": "Máximo contraste y luminosidad, rasgos poderosos."
+    }
+  }
+]

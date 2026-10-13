@@ -1,0 +1,6 @@
+[
+  {"codigo": "casual", "descripcion": "Ropa cómoda del día a día.", "recomendado": ["jean", "camiseta", "tenis"], "evitar": ["traje completo"]},
+  {"codigo": "business casual", "descripcion": "Profesional pero relajado, sin corbata obligatoria.", "recomendado": ["pantalón de vestir", "camisa", "blazer", "zapatos de cuero"], "evitar": ["tenis deportivos", "camisetas con estampados"]},
+  {"codigo": "cocktail", "descripcion": "Elegante para eventos de tarde o noche.", "recomendado": ["vestido", "blazer", "zapatos formales"], "evitar": ["jean desgastado"]},
+  {"codigo": "formal", "descripcion": "Etiqueta para bodas y ceremonias.", "recomendado": ["traje", "vestido largo", "zapatos de cuero"], "evitar": ["blanco total en bodas", "tenis"]}
+]

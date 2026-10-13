@@ -1,0 +1,30 @@
+[
+  {
+    "tono_piel": "clara",
+    "subtono": "frio",
+    "favorecen": ["azul marino", "gris", "rosa palo", "lavanda", "blanco", "negro"],
+    "evitar": ["naranja", "amarillo mostaza"],
+    "nota": "Los tonos fríos y pastel equilibran la piel clara sin apagarla."
+  },
+  {
+    "tono_piel": "media",
+    "subtono": "calido",
+    "favorecen": ["verde oliva", "beige", "cafe", "terracota", "rojo", "dorado"],
+    "evitar": ["gris claro", "pastel muy frío"],
+    "nota": "Los tonos tierra resaltan el subtono cálido."
+  },
+  {
+    "tono_piel": "morena",
+    "subtono": "neutro",
+    "favorecen": ["blanco", "rojo", "azul", "amarillo", "verde esmeralda", "fucsia"],
+    "evitar": ["cafe muy similar al tono de piel"],
+    "nota": "Los colores saturados y el blanco generan buen contraste."
+  },
+  {
+    "tono_piel": "oscura",
+    "subtono": "calido",
+    "favorecen": ["blanco", "amarillo", "naranja", "azul rey", "rojo", "dorado"],
+    "evitar": ["negro total sin contraste"],
+    "nota": "Los colores vivos y brillantes destacan la piel oscura."
+  }
+]

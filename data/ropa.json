@@ -1,27 +1,12 @@
 [
-  {
-    "prenda": "camisa blanca",
-    "tipo": "camisa",
-    "color": "blanco"
-  },
-  {
-    "prenda": "jean azul",
-    "tipo": "pantalon",
-    "color": "azul"
-  },
-  {
-    "prenda": "chaqueta negra",
-    "tipo": "chaqueta",
-    "color": "negro"
-  },
-  {
-    "prenda": "tenis blancos",
-    "tipo": "calzado",
-    "color": "blanco"
-  },
-  {
-    "prenda": "vestido rojo",
-    "tipo": "vestido",
-    "color": "rojo"
-  }
+  {"prenda": "camisa blanca", "tipo": "camisa", "color": "blanco", "estilo": "formal", "clima": "templado"},
+  {"prenda": "camiseta gris", "tipo": "camiseta", "color": "gris", "estilo": "casual", "clima": "calido"},
+  {"prenda": "blusa verde oliva", "tipo": "blusa", "color": "verde oliva", "estilo": "casual", "clima": "templado"},
+  {"prenda": "jean azul", "tipo": "pantalon", "color": "azul", "estilo": "casual", "clima": "templado"},
+  {"prenda": "pantalón de vestir beige", "tipo": "pantalon", "color": "beige", "estilo": "formal", "clima": "templado"},
+  {"prenda": "chaqueta negra", "tipo": "chaqueta", "color": "negro", "estilo": "casual", "clima": "frio"},
+  {"prenda": "blazer azul marino", "tipo": "chaqueta", "color": "azul marino", "estilo": "formal", "clima": "templado"},
+  {"prenda": "vestido rojo", "tipo": "vestido", "color": "rojo", "estilo": "fiesta", "clima": "calido"},
+  {"prenda": "tenis blancos", "tipo": "calzado", "color": "blanco", "estilo": "casual", "clima": "templado"},
+  {"prenda": "zapatos de cuero café", "tipo": "calzado", "color": "cafe", "estilo": "formal", "clima": "templado"}
 ]

@@ -1,3 +1,5 @@
 streamlit
-google-genai
 python-dotenv
+langchain
+langchain-google-genai
+pydantic

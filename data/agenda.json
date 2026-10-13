@@ -1,0 +1,6 @@
+[
+  {"fecha": "2026-10-14", "evento": "Entrevista de trabajo", "lugar": "Oficina centro", "codigo": "business casual"},
+  {"fecha": "2026-10-16", "evento": "Cena de cumpleaños", "lugar": "Restaurante", "codigo": "cocktail"},
+  {"fecha": "2026-10-18", "evento": "Paseo al parque", "lugar": "Parque Arví", "codigo": "casual"},
+  {"fecha": "2026-10-24", "evento": "Boda de un amigo", "lugar": "Finca", "codigo": "formal"}
+]

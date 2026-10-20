@@ -14,6 +14,7 @@ EJECUCION_INICIAL = {
     "ruta": "Sin ejecución",
     "motivo": "",
     "tools": [],
+    "pasos": [],
 }
 
 

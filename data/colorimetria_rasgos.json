@@ -1,0 +1,32 @@
+[
+  {"categoria": "ojos", "valor": "azul claro o gris", "temperatura": "fria", "intensidad": "suave", "profundidad": "clara"},
+  {"categoria": "ojos", "valor": "azul intenso", "temperatura": "fria", "intensidad": "brillante", "profundidad": null},
+  {"categoria": "ojos", "valor": "verde", "temperatura": "calida", "intensidad": null, "profundidad": null},
+  {"categoria": "ojos", "valor": "miel o ámbar", "temperatura": "calida", "intensidad": "suave", "profundidad": null},
+  {"categoria": "ojos", "valor": "café claro", "temperatura": "calida", "intensidad": null, "profundidad": "clara"},
+  {"categoria": "ojos", "valor": "café oscuro", "temperatura": null, "intensidad": null, "profundidad": "profunda"},
+  {"categoria": "ojos", "valor": "negro", "temperatura": "fria", "intensidad": "brillante", "profundidad": "profunda"},
+
+  {"categoria": "cabello", "valor": "rubio ceniza", "temperatura": "fria", "intensidad": "suave", "profundidad": "clara"},
+  {"categoria": "cabello", "valor": "rubio dorado", "temperatura": "calida", "intensidad": "brillante", "profundidad": "clara"},
+  {"categoria": "cabello", "valor": "castaño claro", "temperatura": null, "intensidad": "suave", "profundidad": "clara"},
+  {"categoria": "cabello", "valor": "castaño rojizo o cobrizo", "temperatura": "calida", "intensidad": "suave", "profundidad": "profunda"},
+  {"categoria": "cabello", "valor": "castaño oscuro", "temperatura": null, "intensidad": null, "profundidad": "profunda"},
+  {"categoria": "cabello", "valor": "negro", "temperatura": "fria", "intensidad": "brillante", "profundidad": "profunda"},
+
+  {"categoria": "piel", "valor": "porcelana rosada", "temperatura": "fria", "intensidad": null, "profundidad": "clara"},
+  {"categoria": "piel", "valor": "marfil o durazno", "temperatura": "calida", "intensidad": null, "profundidad": "clara"},
+  {"categoria": "piel", "valor": "trigueña dorada", "temperatura": "calida", "intensidad": null, "profundidad": "profunda"},
+  {"categoria": "piel", "valor": "trigueña oliva", "temperatura": "calida", "intensidad": "suave", "profundidad": "profunda"},
+  {"categoria": "piel", "valor": "morena con fondo azulado", "temperatura": "fria", "intensidad": "brillante", "profundidad": "profunda"},
+  {"categoria": "piel", "valor": "negra profunda", "temperatura": null, "intensidad": null, "profundidad": "profunda"},
+
+  {"categoria": "contraste", "valor": "alto entre piel, ojos y cabello", "temperatura": null, "intensidad": "brillante", "profundidad": null},
+  {"categoria": "contraste", "valor": "bajo entre piel, ojos y cabello", "temperatura": null, "intensidad": "suave", "profundidad": null},
+
+  {"categoria": "venas", "valor": "azules o moradas", "temperatura": "fria", "intensidad": null, "profundidad": null},
+  {"categoria": "venas", "valor": "verdes", "temperatura": "calida", "intensidad": null, "profundidad": null},
+
+  {"categoria": "joyeria", "valor": "plata", "temperatura": "fria", "intensidad": null, "profundidad": null},
+  {"categoria": "joyeria", "valor": "oro", "temperatura": "calida", "intensidad": null, "profundidad": null}
+]

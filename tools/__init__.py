@@ -1,5 +1,9 @@
 from tools.agenda_tool import consultar_agenda
 from tools.codigo_vestimenta_tool import consultar_codigo_vestimenta
+from tools.colorimetria_tool import (
+    consultar_paleta_estacional,
+    diagnosticar_estacion,
+)
 from tools.fecha_tool import obtener_fecha
 from tools.paleta_tool import consultar_paleta_colores
 from tools.ropa_tool import consultar_ropa, sugerir_outfit
@@ -11,4 +15,6 @@ TOOLS_CROMIC = [
     consultar_paleta_colores,
     consultar_ropa,
     sugerir_outfit,
+    diagnosticar_estacion,
+    consultar_paleta_estacional,
 ]

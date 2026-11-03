@@ -3,3 +3,5 @@ python-dotenv
 langchain
 langchain-google-genai
 pydantic
+langgraph>=0.2.0
+numpy

@@ -1,11 +1,18 @@
-"""Integración entre Streamlit y el grafo de LangGraph (threads y checkpoints)."""
+"""Integración entre Streamlit y el grafo de LangGraph (threads, checkpoints y métricas)."""
 
+import json
+import re
+import time
 import uuid
+from pathlib import Path
 
 import streamlit as st
-from langchain_core.messages import HumanMessage
+from langchain_core.messages import HumanMessage, ToolMessage
 
+from core.metrics import MetricasCallback
 from graph.workflow import crear_grafo_cromic
+
+LOG_FILE = Path(__file__).resolve().parents[1] / "logs" / "metricas.jsonl"
 
 
 @st.cache_resource
@@ -47,13 +54,48 @@ def _extraer_texto_final(result: dict) -> str:
     return str(contenido)
 
 
+def _estacion_de_paleta(resultado: dict) -> str | None:
+    """Estación consultada con consultar_paleta_estacional en el turno actual."""
+    for mensaje in reversed(resultado.get("messages", [])):
+        if isinstance(mensaje, HumanMessage):
+            break
+        if (
+            isinstance(mensaje, ToolMessage)
+            and mensaje.name == "consultar_paleta_estacional"
+        ):
+            coincidencia = re.search(
+                r"estacion[\"']\s*:\s*[\"']([a-z]+)", str(mensaje.content)
+            )
+            if coincidencia:
+                return coincidencia.group(1)
+    return None
+
+
+def _guardar_log(mensaje: str, ruta: str, metricas: dict) -> None:
+    """Agrega una línea por turno a logs/metricas.jsonl (evidencia del taller)."""
+    try:
+        LOG_FILE.parent.mkdir(exist_ok=True)
+        registro = {
+            "fecha": time.strftime("%Y-%m-%d %H:%M:%S"),
+            "mensaje": mensaje,
+            "ruta": ruta,
+            **metricas,
+        }
+        with LOG_FILE.open("a", encoding="utf-8") as archivo:
+            archivo.write(json.dumps(registro, ensure_ascii=False) + "\n")
+    except OSError:
+        pass
+
+
 def responder(mensaje_usuario: str, perfil: dict) -> dict:
-    """Ejecuta un turno en el grafo usando el thread_id de la sesión."""
+    """Ejecuta un turno en el grafo y devuelve respuesta + métricas."""
     grafo = obtener_grafo()
+    medidor = MetricasCallback()
 
     config = {
         "configurable": {"thread_id": st.session_state.thread_id},
         "recursion_limit": 15,
+        "callbacks": [medidor],
     }
 
     estado_entrada = {
@@ -66,12 +108,23 @@ def responder(mensaje_usuario: str, perfil: dict) -> dict:
         "pasos_ejecutados": [],
     }
 
-    resultado = grafo.invoke(estado_entrada, config=config)
+    try:
+        resultado = grafo.invoke(estado_entrada, config=config)
+    except Exception as error:
+        medidor.errores.append(str(error)[:300])
+        _guardar_log(mensaje_usuario, "error", medidor.resumen())
+        raise
+
+    metricas = medidor.resumen()
+    ruta = resultado.get("ruta", "Desconocida")
+    _guardar_log(mensaje_usuario, ruta, metricas)
 
     return {
         "respuesta": _extraer_texto_final(resultado),
-        "ruta": resultado.get("ruta", "Desconocida"),
+        "ruta": ruta,
         "motivo": resultado.get("motivo", ""),
         "tools": resultado.get("herramientas_usadas", []),
         "pasos": resultado.get("pasos_ejecutados", []),
+        "metricas": metricas,
+        "estacion_paleta": _estacion_de_paleta(resultado),
     }

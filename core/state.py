@@ -74,6 +74,7 @@ def registrar_ejecucion(resultado: dict) -> None:
         "ruta": resultado.get("ruta", "Desconocida"),
         "motivo": resultado.get("motivo", ""),
         "tools": resultado.get("tools", []),
+        "pasos": resultado.get("pasos", []),
     }
 
 

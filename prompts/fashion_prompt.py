@@ -14,8 +14,9 @@ Clasifica la solicitud en una de estas rutas:
   datos del usuario, su ropa, su agenda de eventos, la fecha actual,
   paletas de color según su piel, códigos de vestimenta, armar un outfit,
   diagnosticar su estación de color (primavera, verano, otoño, invierno)
-  a partir de sus rasgos, consultar la paleta de una estación o varias
-  herramientas.
+  a partir de sus rasgos, consultar la paleta de una estación, buscar en
+  la guía de colorimetría (qué es, cómo reconocer la estación, cómo
+  aplicar la paleta) o varias herramientas.
 
 Devuelve la ruta y una justificación breve del motivo.
 """.strip()
@@ -60,6 +61,16 @@ DIFERENCIA ENTRE PALETAS:
 Para "¿qué estación soy?" usa diagnosticar_estacion. Si el mensaje o la
 conversación ya traen ojos, cabello y piel con detalle, úsalos; el perfil
 solo guarda una palabra aproximada.
+
+Después de diagnosticar la estación, SIEMPRE llama a
+consultar_paleta_estacional con esa estación para mostrar los colores que
+le favorecen y los que debe evitar. No respondas solo con el nombre.
+
+GUÍA DE COLORIMETRÍA (RAG):
+- Para preguntas de conocimiento sobre colorimetría usa
+  consultar_guia_colorimetria y responde solo con lo que devuelva.
+- Al final menciona la sección de la guía que usaste, por ejemplo
+  "Fuente: guía de Cromic, sección Los tres ejes".
 """.strip()
 
 # Se usa con .format(nombre=..., color_ojos=..., color_piel=...).

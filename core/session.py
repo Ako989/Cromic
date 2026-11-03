@@ -1,19 +1,19 @@
-"""Integración entre Streamlit y el grafo de LangGraph (threads y checkpoints)."""
-
-import uuid
-
-import streamlit as st
-from langchain_core.messages import HumanMessage
-
-from graph.workflow import crear_grafo_cromic
+"""Integración entre Streamlit y el grafo de LangGraph (threads, checkpoints y métricas)."""
 
 import json
+import re
 import time
+import uuid
 from pathlib import Path
 
+import streamlit as st
+from langchain_core.messages import HumanMessage, ToolMessage
+
 from core.metrics import MetricasCallback
+from graph.workflow import crear_grafo_cromic
 
 LOG_FILE = Path(__file__).resolve().parents[1] / "logs" / "metricas.jsonl"
+
 
 @st.cache_resource
 def obtener_grafo():
@@ -54,6 +54,23 @@ def _extraer_texto_final(result: dict) -> str:
     return str(contenido)
 
 
+def _estacion_de_paleta(resultado: dict) -> str | None:
+    """Estación consultada con consultar_paleta_estacional en el turno actual."""
+    for mensaje in reversed(resultado.get("messages", [])):
+        if isinstance(mensaje, HumanMessage):
+            break
+        if (
+            isinstance(mensaje, ToolMessage)
+            and mensaje.name == "consultar_paleta_estacional"
+        ):
+            coincidencia = re.search(
+                r"estacion[\"']\s*:\s*[\"']([a-z]+)", str(mensaje.content)
+            )
+            if coincidencia:
+                return coincidencia.group(1)
+    return None
+
+
 def _guardar_log(mensaje: str, ruta: str, metricas: dict) -> None:
     """Agrega una línea por turno a logs/metricas.jsonl (evidencia del taller)."""
     try:
@@ -84,6 +101,7 @@ def responder(mensaje_usuario: str, perfil: dict) -> dict:
     estado_entrada = {
         "messages": [HumanMessage(content=mensaje_usuario)],
         "usuario": dict(perfil),
+        # Reinicio de la traza en cada turno
         "ruta": "",
         "motivo": "",
         "herramientas_usadas": [],
@@ -108,4 +126,5 @@ def responder(mensaje_usuario: str, perfil: dict) -> dict:
         "tools": resultado.get("herramientas_usadas", []),
         "pasos": resultado.get("pasos_ejecutados", []),
         "metricas": metricas,
+        "estacion_paleta": _estacion_de_paleta(resultado),
     }
